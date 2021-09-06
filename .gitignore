@@ -1,0 +1,16 @@
+# System OS
+*.DS_Store
+*.png
+!sample.png
+.idea
+*.vscode
+*debug.log
+*desktop.ini
+*.dat
+
+# Config files
+vncconfig.sh
+
+# Include your .evn file here
+#.env.userInfo
+.env.dev
