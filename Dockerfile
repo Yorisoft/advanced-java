@@ -11,10 +11,8 @@ ENV VNC_RESOLUTION=1920x1080 \
 WORKDIR /usr/src/app
 
 COPY . ./
-# update system, install puppeteer dependencies, and install node
-RUN apt-get update -y \
-    && apt-get upgrade -y \
-    && apt-get install -yq libgconf-2-4 sudo curl wget xvfb dos2unix
+# install program dependencies
+RUN apt-get install -yq libgconf-2-4 sudo curl wget xvfb dos2unix 
 
 # Install Java: jdk-8
 RUN sudo apt-get install openjdk-8-jdk -y \
