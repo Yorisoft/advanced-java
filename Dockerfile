@@ -12,7 +12,8 @@ WORKDIR /usr/src/app
 
 COPY . ./
 # install program dependencies
-RUN apt-get install -yq libgconf-2-4 sudo curl wget xvfb dos2unix 
+RUN apt-get update -y \
+    apt-get install -yq libgconf-2-4 sudo curl wget xvfb dos2unix 
 
 # Install Java: jdk-8
 RUN sudo apt-get install openjdk-8-jdk -y \
